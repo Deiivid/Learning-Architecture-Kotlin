@@ -34,6 +34,7 @@ android {
 
 dependencies {
     implementation(project(":app:src:main:java:es:deiividdev:learningkotlin:core")) // Conecta con el core
+    include(":app:kotlin+java:src:main:java:es:deiividdev:learningkotlin:episodes:data")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
