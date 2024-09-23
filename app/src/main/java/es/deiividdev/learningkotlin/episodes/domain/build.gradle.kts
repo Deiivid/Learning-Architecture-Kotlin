@@ -33,6 +33,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":app:src:main:java:es:deiividdev:learningkotlin:core")) // Conecta con el core
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

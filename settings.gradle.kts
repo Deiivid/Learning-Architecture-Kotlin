@@ -21,6 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Learning Kotlin"
 include(":app")
-include(":app:src:main:java:es:deiividdev:learningkotlin:episodes:data")
-include(":app:src:main:java:es:deiividdev:learningkotlin:episodes:domain")
-include(":app:src:main:java:es:deiividdev:learningkotlin:episodes:presentation")
+include(":app:kotlin+java:src:main:java:es:deiividdev:learningkotlin:episodes:data")
+include(":app:kotlin+java:src:main:java:es:deiividdev:learningkotlin:episodes:domain")
+include(":app:kotlin+java:src:main:java:es:deiividdev:learningkotlin:episodes:presentation")
+include(":app:kotlin+java:src:main:java:es:deiividdev:learningkotlin:core")

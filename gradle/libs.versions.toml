@@ -9,8 +9,55 @@ appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.9.1"
 constraintlayout = "2.1.4"
+#region [DAGGER - HILT]
+hilt = "2.48"
+hiltExt = "1.1.0"
+androidxHiltNavigationCompose = "1.1.0"
+#endregion
+#region [KSP]
+kspVersion = "1.9.21-1.0.16"
+jetbrainsKotlinJvm = "1.9.0"
+#endregion
+activityCompose = "1.9.0"
+composeBom = "2023.08.00"
+playServicesMaps = "18.2.0"
+maps = "3.1.0-beta"
+navigationCompose = "2.7.7"
+composeMaterial = "1.3.0"
+jvmTarget = "17"
+composeVersion = "1.6.5"
+#region [MATERIAL 3]
+material3Version = "1.2.1"
+#endregion
+#region [KSP]
+#endregion
+#region [LIFECYCLE]
+lifecycleViewmodelKtxVersion = "2.7.0-alpha03"
+lifecycleViewmodelComposeVersion = "2.7.0-alpha03"
+lifecycleRuntimeKtxVersion = "2.6.2"  # Cambia el alias aquí
 
+lifecycle-runtime-ktx = "2.6.2"
+#endregion
+
+navigationComposeVersion = "2.7.4"
+composeFundationVersion = "1.6.5"
+#playServicesAdsLite = "23.0.0"
+splashScreenVersion = "1.0.1"
+#play-services-ads = "23.0.0"
+
+#region [CORRUTINE]
+kotlinxCoroutinesVersion = "1.7.3"
+kotlinxCoroutinestestVersion = "1.7.3"
+#endregion
 [libraries]
+#region [DAGGER - HILT]
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
+hilt-android-core = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltExt" }
+hilt-ext-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltExt" }
+#endregion
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -20,8 +67,76 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtxVersion" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-material = { group = "androidx.wear.compose", name = "compose-material", version.ref = "composeMaterial" }
+compsoeAnimiation = { module = "androidx.compose.animation:animation", version.ref = "composeVersion" }
+composeUi = { module = "androidx.compose.ui:ui", version.ref = "composeVersion" }
+composeUiToolingPreview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "composeVersion" }
+composeUiTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "composeVersion" }
+composeUiTest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "composeVersion" }
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+maps = { group = "com.google.android.libraries.maps", name = "maps", version.ref = "maps" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+#region [MATERIAL 3]
+material3 = { module = "androidx.compose.material3:material3", version.ref = "material3Version" }
+androidx-compose-material3 = { group = "androidx.wear.compose", name = "compose-material3", version = "1.0.0-alpha19" }
+composeFundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "composeFundationVersion" }
+composeFundationLayout = { group = "androidx.compose.foundation", name = "foundation-layout", version.ref = "composeFundationVersion" }
+#play-services-ads = { module = "com.google.android.gms:play-services-ads", version.ref = "play-services-ads" }
+#play-services-ads-lite = { group = "com.google.android.gms", name = "play-services-ads-lite", version.ref = "playServicesAdsLite" }
+
+#Splash
+splashScreen = { module = "androidx.core:core-splashscreen", version.ref = "splashScreenVersion" }
+
+#region [CORRUTINES]
+coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesVersion" }
+#endregion
+#region [VIEWMODEL]
+lifecycleViewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtxVersion" }
+lifecycleViewmodelCompose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelComposeVersion" }
+#endregion
+navigationCompose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationComposeVersion" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+
+#region [DAGGER - HILT]
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+#endregion
+#region [KSP]
+ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+
+
+[bundles]
+appDependencies = [
+    "androidx-lifecycle-runtime-ktx",
+    "composeUi",
+    "composeUiToolingPreview",
+    "composeUiTooling",
+    "composeUiTest",
+    "material3",
+    "coroutines",
+    "lifecycleViewmodel",
+    "lifecycleViewmodelCompose",
+    "navigationCompose",
+    "compsoeAnimiation",
+    "composeFundation",
+    "composeFundationLayout",
+    "splashScreen",
+    "hilt-android-core",
+    "hilt-compiler",
+    "androidx-hilt-navigation-compose",
+]
 
