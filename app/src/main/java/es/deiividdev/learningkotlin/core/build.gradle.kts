@@ -35,6 +35,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":app:src:main:java:es:deiividdev:learningkotlin:episodes")) // Conecta con el core
+
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation(libs.androidx.core.ktx)
