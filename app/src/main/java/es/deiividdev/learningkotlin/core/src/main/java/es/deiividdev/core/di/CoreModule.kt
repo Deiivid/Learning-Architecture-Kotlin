@@ -13,12 +13,11 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object CoreModule {
-
     @Singleton
     @Provides
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://api.example.com")
+            .baseUrl("https://api.example.com") //change this
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
